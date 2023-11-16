@@ -1,0 +1,19 @@
+package com.ilp.service;
+
+import java.util.Scanner;
+
+public class CurrentAccountService {
+
+	static Scanner scanner = new Scanner(System.in);
+	public static void createCurrentAccount() {
+		// TODO Auto-generated method stub
+		
+		String roi =  scanner.nextLine();
+		CurrentAccount 
+		
+	}
+
+	
+	
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AccountUtility.java&apos; to &apos;ILP_OOAD_14112023_Day3_IHHAS-A/src/com.ilp.utility&apos;&#x0D;&#x0A;- Original project: &apos;ILP_OOAD_10112023_Day2&apos;&#x0D;&#x0A;- Destination element: &apos;ILP_OOAD_14112023_Day3_IHHAS-A/src/com.ilp.utility&apos;&#x0D;&#x0A;- Original element: &apos;com.ilp.utility.AccountUtility.java&apos;" description="Copy compilation unit" destination="=ILP_OOAD_14112023_Day3_IHHAS-A/src&lt;com.ilp.utility" element1="/src&lt;com.ilp.utility{AccountUtility.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1699934116950" units="1" version="1.0"/>
+</session>

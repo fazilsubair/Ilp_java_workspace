@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Basic_Pattern_01.java&apos; to &apos;ILP_BacisProgramming_SelfLearn_29102023/src/com.ilp_basic_programming_selflearn&apos;&#x0D;&#x0A;- Original project: &apos;ILP_BacisProgramming_SelfLearn_29102023&apos;&#x0D;&#x0A;- Destination element: &apos;ILP_BacisProgramming_SelfLearn_29102023/src/com.ilp_basic_programming_selflearn&apos;&#x0D;&#x0A;- Original element: &apos;Basic_Pattern_01.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.ilp_basic_programming_selflearn" element1="/src&lt;{Basic_Pattern_01.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1698597355803" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,62 @@
+package com.ilp.service;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.ilp.entity.Account;
+import com.ilp.entity.CurrentAccount;
+
+public class AccountService {
+	static Scanner scanner = new Scanner(System.in);
+	public static Account createAccount() {
+		// TODO Auto-generated method stub
+
+		
+		System.out.print("Enter account Code: ");
+		String accountCode = scanner.nextLine();
+		System.out.print("Enter account Name: ");
+		String accountName = scanner.nextLine();
+		System.out.print("Enter opening balance: ");
+		double openingBalance = scanner.nextDouble();
+		
+		
+		System.out.println("1. Savings Account 2. Current Account");
+
+		int choice = scanner.nextInt();
+		switch(choice) {
+		case 1:
+			
+			createCurrentAccount(accountCode,accountName,openingBalance);
+			break;
+		case 2:
+			createSavingsAccount();
+		}
+		return new Account(accountCode, accountName, openingBalance);
+	}
+
+	public static void displayAllAccount(ArrayList<Account> accountList, String accno) {
+		// TODO Auto-generated method stub
+		System.out.println("Account No" + "       " + "Account Name" + "     " + "Account Balance" );
+
+		for (Account account : accountList) {
+			
+			if(accno.compareTo(account.getAccountNo())==0) {
+				System.out.println(
+						account.getAccountNo() + "\t\t" + account.getAccountName() + "     " + account.getAccountBalace());
+			}
+	}}
+	
+	
+	public static void createCurrentAccount(String accountCode,String accountName,double openingBalance ) {
+		// TODO Auto-generated method stub
+		
+		String roi =  scanner.nextLine();
+		Account account = new CurrentAccount(accountCode,accountName,openingBalance,roi);
+		
+	}
+	
+	public static void createSavingsAccount() {
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.ilp.service;
+
+import com.ilp.entity.Account;
+
+public class AccountService {
+
+	public static Account createAccount() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void displayAccount(Account account) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

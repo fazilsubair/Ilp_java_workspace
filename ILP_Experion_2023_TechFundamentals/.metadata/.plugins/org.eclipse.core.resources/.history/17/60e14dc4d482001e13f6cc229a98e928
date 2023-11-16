@@ -1,0 +1,55 @@
+package com.ilp.utility;
+
+import java.security.Provider.Service;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.ilp.entity.Customer;
+import com.ilp.entity.Services;
+import com.ilp.services.CustomerConfiguration;
+import com.ilp.services.ProductConfiguration;
+
+public class BankUtility {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner = new Scanner(System.in);
+
+		Customer customer = null;
+		char goToMainMenu;
+
+		do {
+			System.out.println("******Welcome To Bank************\n" + "5.Create Service\n" + "6.Create Product\n"
+					+ "1.Create Accounts\n" + "2.Display Accounts\n" + "3.Transaction Bill\n" + "4.Exit");
+			System.out.print("Enter your choice : ");
+			int mainMenuChoice = scanner.nextInt();
+			switch (mainMenuChoice) {
+			case 1:
+
+				customer = CustomerConfiguration.createCustomer(customer);
+				break;
+			case 2:
+				CustomerConfiguration.displayCustomer(customer);
+				break;
+			case 3:
+				CustomerConfiguration.transactionBill(customer);
+				break;
+			case 4:
+				System.out.println("Exit");
+				break;
+			case 5:
+				ArrayList<Services> serviceList = new ArrayList<Services>();			
+				serviceList=ProductConfiguration.createService(); 
+				break;
+			case 6:
+				ProductConfiguration.createProduct(serviceList);
+				break;
+
+			}
+			System.out.print("Go back to main menu (y/n) : ");
+			goToMainMenu = scanner.next().charAt(0);
+		} while (goToMainMenu == 'y');
+
+	}
+}

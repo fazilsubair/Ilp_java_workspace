@@ -1,0 +1,22 @@
+package com.ilp.service;
+
+import com.ilp.entity.Customer;
+
+public class CustomerService {
+
+		Customer customer = new Customer();
+
+		public static Customer createCustomer() {
+			Customer customer = new Customer();
+			customer.setCustomerCode("cus100");
+			customer.setCustomerName("fazil");
+			return customer;
+		}
+
+		public static void displayCustomer(Customer customer2) {
+			// TODO Auto-generated method stub
+			
+			
+		}
+	
+}

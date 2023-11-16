@@ -1,0 +1,15 @@
+package com.ilp.service;
+
+public class DepositService {
+
+	public static void depositMoney() {
+		// TODO Auto-generated method stub
+		
+		
+		
+	}
+	
+	
+	
+
+}

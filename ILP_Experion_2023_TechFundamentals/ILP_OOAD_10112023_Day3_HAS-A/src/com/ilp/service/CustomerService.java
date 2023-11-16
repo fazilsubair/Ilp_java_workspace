@@ -1,0 +1,38 @@
+package com.ilp.service;
+
+import java.util.Scanner;
+
+
+import com.ilp.entity.Account;
+import com.ilp.entity.Customer;
+
+public class CustomerService {
+
+//		Customer customer = new Customer();
+
+		public static Customer createCustomer() {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("enter the customer name ");
+			
+			String CustomerNameInput = scanner.nextLine() ;
+			Account account = AccountService.createAccount();
+			
+//			customer.setCustomerName(CustomerNameInput);
+//			System.out.println("create customer working");
+			Customer customer = new Customer("cus100",CustomerNameInput,account);
+//			customer.setCustomerCode();
+			
+			return customer;
+		}
+
+		public static void displayCustomer(Customer customer) {
+			// TODO Auto-generated method stub
+			
+			
+			System.out.println("Customer Code: /tCustomer Name \tcustomer account");
+			System.out.println(customer.getCustomerCode()+"\t"+customer.getCustomerName()+"\t"+customer.getAccount().getAccountName()+"\t"+customer.getAccount().getAccountBalance()+"\t"+customer.getAccount().getAccountNO());
+			
+			
+		}
+	
+}
