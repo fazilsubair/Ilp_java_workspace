@@ -14,7 +14,6 @@ public class CustomerConfiguration {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static Account createAccount(ArrayList<Product> product) {
-		// TODO Auto-generateproductd method stub
 
 		Account account = null;
 
@@ -35,14 +34,16 @@ public class CustomerConfiguration {
 
 		if (product.get(productChoice - 1) instanceof SavingsMaxAccount) {
 
-			if (SavingsMaxAccount.minimumBalance(accountBalance)) {
+			SavingsMaxAccount selectedProduct = (SavingsMaxAccount) product.get(productChoice - 1);
+
+			if (selectedProduct.getMinimumBalance() > accountBalance) {
 
 				account = new Account(accountNo, accountBalance, product.get(productChoice - 1));
 			} else {
 				do {
 					System.out.print("re-enter the Balance: ");
 					accountBalance = scanner.nextInt();
-				} while (!SavingsMaxAccount.minimumBalance(accountBalance));
+				} while (!(selectedProduct.getMinimumBalance() > accountBalance));
 
 				account = new Account(accountNo, accountBalance, product.get(productChoice - 1));
 
@@ -174,10 +175,13 @@ public class CustomerConfiguration {
 						case 1: {
 							System.out.println("enter the money to be depositer:");
 							Money = scanner.nextInt();
+							LoanAccount loanAccount = (LoanAccount) customerIndex.getAccountList()
+									.get(accountchoice - 1).getProduct();
 							if (Money > 0) {
 								if (customerIndex.getAccountList().get(accountchoice - 1)
 										.getProduct() instanceof LoanAccount) {
-									customerIndex.getAccountList().get(accountchoice - 1).deposit(Money * 0.97);
+									customerIndex.getAccountList().get(accountchoice - 1)
+											.deposit(Money * (1 - loanAccount.getDepositCharge()));
 
 								} else {
 
@@ -193,8 +197,10 @@ public class CustomerConfiguration {
 
 							if (customerIndex.getAccountList().get(accountchoice - 1)
 									.getProduct() instanceof SavingsMaxAccount) {
-								if (SavingsMaxAccount.minimumBalance(
-										customerIndex.getAccountList().get(accountchoice - 1).getBalance() - Money)) {
+								SavingsMaxAccount selectedProduct = (SavingsMaxAccount) customerIndex.getAccountList()
+										.get(accountchoice - 1).getProduct();
+								if (selectedProduct.getMinimumBalance() < (customerIndex.getAccountList()
+										.get(accountchoice - 1).getBalance() - Money)) {
 
 									customerIndex.getAccountList().get(accountchoice - 1).withdraw(Money);
 								} else {

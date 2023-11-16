@@ -30,4 +30,5 @@
     <fullyQualifiedTypeName name="com.ilp.entity.Customer"/>
     <fullyQualifiedTypeName name="com.ilp.services.CustomerConfiguration"/>
     <fullyQualifiedTypeName name="com.ilp.entity.SavingsMaxAccount"/>
+    <fullyQualifiedTypeName name="java.nio.channels.SelectableChannel"/>
 </qualifiedTypeNameHistroy>

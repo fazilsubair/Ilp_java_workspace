@@ -1,5 +1,0 @@
-package com.ilp.entity;
-
-public class LoanAccount extends Product {
-
-}
